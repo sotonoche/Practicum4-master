@@ -25,6 +25,7 @@ namespace Practicum4_Task2
             {
                 try
                 {
+                    Console.Write("Введите значение n: ");
                     n = int.Parse(Console.ReadLine());
                     if(n < 1000) throw new Exception("Число не может быть меньше 1000!");
                     break;

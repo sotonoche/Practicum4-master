@@ -68,6 +68,7 @@
             // 
             // numericUpDownN
             // 
+            this.numericUpDownN.DecimalPlaces = 2;
             this.numericUpDownN.Location = new System.Drawing.Point(131, 36);
             this.numericUpDownN.Minimum = new decimal(new int[] {
             100,
@@ -80,6 +81,7 @@
             // 
             // numericUpDownM
             // 
+            this.numericUpDownM.DecimalPlaces = 2;
             this.numericUpDownM.Location = new System.Drawing.Point(131, 72);
             this.numericUpDownM.Minimum = new decimal(new int[] {
             100,

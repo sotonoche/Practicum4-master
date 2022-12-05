@@ -17,7 +17,7 @@ namespace Practicum4_Task1_WF
             InitializeComponent();
         }
 
-        static double f(double n, double m)
+        static int f(int n, int m)
         {
             if (n == 0)
                 return m + 1;
@@ -30,14 +30,26 @@ namespace Practicum4_Task1_WF
 
         private void buttonRes_Click(object sender, EventArgs e)
         {
-            double n, m, res;
+            int n, m, res;
 
-            n = (double)numericUpDownN.Value;
-            m = (double)numericUpDownM.Value;
+            n = (int)numericUpDownN.Value;
+            m = (int)numericUpDownM.Value;
 
             if(n < 0 || m < 0)
             {
                 MessageBox.Show("Введенные значения должны быть неотрицательными!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (n > 3 && m > 0)
+            {
+                MessageBox.Show("Значение n не может быть больше 3, иначе стек будет переполнен", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (n > 3 && m > 11)
+            {
+                MessageBox.Show("Значение n не может быть больше 3, а значение m не может быть больше 11, т.к. стек будет переполнен!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

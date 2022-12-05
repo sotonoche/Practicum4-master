@@ -8,38 +8,31 @@ namespace Practicum4
 {
     internal class Program
     {
-        static double f(double n, double m)
+        static int f(int n, int m)
         {
-            try
-            {
-                if (n == 0)
+            if (n == 0)
                     return m + 1;
                 else
             if ((n != 0) && (m == 0))
                     return f(n - 1, 1);
                 else
-                    return f(n - 1, f(n, m - 1));
-            }
-            catch (StackOverflowException)
-            {
-                Console.WriteLine("Стек переполнен. Значение на выходе слишком большое!");
-            }
-            
+                    return f(n - 1, f(n, m - 1));  
         }
         
         static void Main(string[] args)
         {
-            double m, n, res;
-
+            int m, n, res;
+            
             while (true)
             {
                 try
                 {
                     Console.Write("Введите значение n: ");
-                    n = Convert.ToDouble(Console.ReadLine());
+                    n = Convert.ToInt32(Console.ReadLine());
                     Console.Write("Введите значение m: ");
-                    m = Convert.ToDouble(Console.ReadLine());
+                    m = Convert.ToInt32(Console.ReadLine());
                     if(n < 0 || m < 0) throw new Exception("Введенные значения должны быть неотрицательными!");
+                    if (n > 3 && m > 11) throw new Exception("Значение n не может быть больше 3, а значение m не может быть больше 11, т.к. стек будет переполнен!");
                     break;
                 }
                 catch (FormatException)

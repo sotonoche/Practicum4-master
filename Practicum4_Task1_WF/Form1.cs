@@ -37,7 +37,7 @@ namespace Practicum4_Task1_WF
 
             if(n < 0 || m < 0)
             {
-                MessageBox.Show("Введенные значения должны быть неотрицательными!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Введенные значения должны быть неотрицательными!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

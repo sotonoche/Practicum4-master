@@ -41,7 +41,7 @@ namespace Practicum4_Task1_WF
                 return;
             }
 
-            if (n >= 3 && m > 11)
+            if (n >= 3 && m >= 11)
             {
                 MessageBox.Show("Значение n не может быть больше 3, а значение m не может быть больше 11, т.к. стек будет переполнен!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
